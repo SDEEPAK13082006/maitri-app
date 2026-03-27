@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build --prefix ./client",
+  "outputDirectory": "./client/dist",
+  "public": true,
+  "redirects": [
+    {
+      "source": "/api/:match*",
+      "destination": "https://maitri-api.vercel.app/api/:match*"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
